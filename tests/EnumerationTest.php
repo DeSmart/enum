@@ -24,7 +24,9 @@ class EnumerationTest extends TestCase
         $this->assertEquals('sometimes_good_or_evil', Character::sometimesGoodSometimesEvil()->getValue());
         $this->assertEquals('sometimes_good_or_evil', Character::SOMETIMES_GOOD_SOMETIMES_EVIL()->getValue());
         $this->assertEquals('sometimes_good_or_evil', Character::sometimes_good_sometimes_evil()->getValue());
+        $this->assertEquals('sometimes_good_or_evil', Character::fromName('sometimesGoodSometimesEvil')->getValue());
         $this->assertEquals('sometimes_good_or_evil', Character::fromName('sometimes_good_sometimes_evil')->getValue());
+        $this->assertEquals('sometimes_good_or_evil', Character::fromName('SOMETIMES_GOOD_SOMETIMES_EVIL')->getValue());
         $this->assertEquals('sometimes_good_or_evil', Character::fromValue('sometimes_good_or_evil')->getValue());
         $this->assertTrue(Character::good()->equals(Character::good()));
         $this->assertTrue(Character::good()->equals(Character::fromName('good')));
