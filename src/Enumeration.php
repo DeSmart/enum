@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace DeSmart\Enum;
 
+use JsonSerializable;
 use function DeSmart\Enum\Helpers\toConstName;
 
-abstract class Enumeration
+abstract class Enumeration implements JsonSerializable
 {
     /**
      * @var int|string
@@ -77,6 +78,14 @@ abstract class Enumeration
         return (string) $this->getValue();
     }
 
+    /**
+     * @return int|string
+     */
+    public function jsonSerialize()
+    {
+        return $this->value;
+    }
+    
     public function equals(Enumeration $other): bool
     {
         if (! $other instanceof static) {
