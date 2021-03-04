@@ -8,6 +8,8 @@ Package provides a strongly typed enums for PHP.
 
 > `Enumeration` class name is used on purpose, to avoid potential issues. There will be native enums in PHP 8.1 🎉
 
+> There are other great packages implementing enums for PHP. Consider checking them out!
+
 ## Installation
 To install the package via Composer, simply run the following command:
 ```
